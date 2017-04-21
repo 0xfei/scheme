@@ -171,15 +171,31 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\internal.cpp"
+				RelativePath=".\environment.c"
 				>
 			</File>
 			<File
-				RelativePath=".\lambda.cpp"
+				RelativePath=".\environment.h"
 				>
 			</File>
 			<File
-				RelativePath=".\main.cpp"
+				RelativePath=".\internal.c"
+				>
+			</File>
+			<File
+				RelativePath=".\lambda.c"
+				>
+			</File>
+			<File
+				RelativePath=".\list.c"
+				>
+			</File>
+			<File
+				RelativePath=".\list.h"
+				>
+			</File>
+			<File
+				RelativePath=".\main.c"
 				>
 			</File>
 			<File
@@ -188,6 +204,10 @@
 			</File>
 			<File
 				RelativePath=".\tailrec.h"
+				>
+			</File>
+			<File
+				RelativePath=".\type.h"
 				>
 			</File>
 		</Filter>
