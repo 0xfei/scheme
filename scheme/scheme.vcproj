@@ -171,6 +171,14 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\compile.c"
+				>
+			</File>
+			<File
+				RelativePath=".\compile.h"
+				>
+			</File>
+			<File
 				RelativePath=".\environment.c"
 				>
 			</File>
@@ -179,7 +187,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\headers.h"
+				>
+			</File>
+			<File
 				RelativePath=".\internal.c"
+				>
+			</File>
+			<File
+				RelativePath=".\internal.h"
 				>
 			</File>
 			<File

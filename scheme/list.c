@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-
-#include "list.h"
+#include "headers.h"
 
 list_entry* parse_to_list(char* s, int len)
 {
