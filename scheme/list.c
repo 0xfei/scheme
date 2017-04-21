@@ -45,11 +45,14 @@ list_entry* parse_to_list(char* s, int len)
                 break;
             }
         } else {
+            ++i;
+            ++j;
             k = 1;
             while (j < len && k > 0) {
                 if (s[j] == '(') {
                     ++k;
-                } else {
+                }
+                if (s[j] == ')') {
                     --k;
                 }
                 ++j;
@@ -59,7 +62,7 @@ list_entry* parse_to_list(char* s, int len)
                 break;
             } else {
                 temp->is_list = 1;
-                temp->data = parse_to_list(s+j, len - j);
+                temp->data = parse_to_list(s+i, j-i-1);
             }
         }
 
@@ -126,10 +129,10 @@ void free_list(list_entry* entry)
 
 char* alloc_string(int len)
 {
-    char* s = (char*)malloc(len);
+    char* s = (char*)malloc(len+1);
     
     if (s) {
-        memset(s, 0, len);
+        memset(s, 0, len+1);
     }
 
     return s;
@@ -142,5 +145,15 @@ void free_string(char* s)
 
 int list_test()
 {
+    char* s[] = {"a b c", "(a b c)", "(a (b c) (d e f) g)", "((a b) (c d) (e f))"};
+    int i = 0;
+    list_entry* a = NULL;
+    list_entry* temp = NULL;
+    
+    for (i = 0; i < sizeof(s)/sizeof(char*); ++i) {
+        a = parse_to_list(s[i], strlen(s[i]));
+        free_list(a);
+    }
+
     return 0;
 }

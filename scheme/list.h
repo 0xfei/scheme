@@ -7,7 +7,7 @@ typedef struct _list_entry {
     void *data;
 } list_entry;
 
-list_entry* parse_to_list(char* s);
+list_entry* parse_to_list(char* s, int len);
 
 list_entry* alloc_list_item();
 void free_list_item(list_entry* entry);
