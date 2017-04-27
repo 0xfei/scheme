@@ -4,5 +4,5 @@
 
 int lambda_test()
 {
-
+    return 0;
 }

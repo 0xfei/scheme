@@ -50,10 +50,23 @@ __tailrec:
     }
 }
 
+int tailrec_add_test(int n, int a, int b, void* f)
+{
+    if (n == 1) {
+        return b;
+    } else {
+        return ((int (*)(int, int, int, void*))f)(n-1, b, a+b, f);
+    }
+}
+
 int tailrec_test()
 {
-    int p[3] = {100000000, 0, 1};
+    int p[3] = {10, 0, 1};
     int ans = call(fibnaci, 3, p);
     printf("%d\n", ans);
+
+    ans = tailrec_add_test(10, 0, 1, tailrec_add_test);
+    printf("%d\n", ans);
+
     return 0;
 }
